@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+body {
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.task {
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.task-description[readonly] {
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.task-description:focus {
+  border-color: #ced4da;
+  box-shadow: none;
 }
 
-.App-link {
-  color: #61dafb;
+.task-description-done {
+  text-decoration: line-through;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task:hover {
+  transform: scale(1.02);
 }
+
+/* .progress {
+  height: 40px;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.progress-label {
+  color: #0275D8;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+} */
